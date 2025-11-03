@@ -42,6 +42,7 @@ async function connectToWhatsApp() {
 
   sock.ev.on("messages.upsert", async ({ messages }) => {
     const msg = messages[0];
+    console.log("Mensagem recebida:", msg);
     if (!msg.message) return;
 
     const sender = msg.key.remoteJid!;
@@ -58,6 +59,7 @@ async function connectToWhatsApp() {
       });
     }
   });
+  sock.ev.on("creds.update", saveCreds);
 }
 
 connectToWhatsApp();
