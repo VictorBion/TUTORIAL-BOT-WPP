@@ -16,5 +16,10 @@
     "rimraf": "^6.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^7.0.0-rc.6",
+    "qrcode-terminal": "^0.12.0"
   }
 }
